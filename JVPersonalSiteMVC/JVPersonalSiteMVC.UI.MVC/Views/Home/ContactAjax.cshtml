@@ -1,0 +1,50 @@
+﻿@model JVPersonalSiteMVC.UI.MVC.Models.ContactViewModel
+
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/jqueryval")
+
+
+@using (Html.BeginForm("", "", FormMethod.Post, new { id = "ContactCreateForm" }))
+{
+    @Html.AntiForgeryToken()
+    <article id="contact">
+        <h2 class="major">Contact</h2>
+        <form method="post">
+            <div class="fields">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                <div class="field half">
+                    @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "field half" })
+                </div>
+                <div class="field half">
+                    @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                </div>
+                <div class="field half">
+                    @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "field half" })
+                    <div class="field half">
+                        @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="field">
+                    @Html.LabelFor(model => model.Message, htmlAttributes: new { @class = "field"})
+                    <div class="field">
+                        @Html.EditorFor(model => model.Message, new { htmlAttributes = new { @class = "field" } })
+                        @Html.ValidationMessageFor(model => model.Message, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+            <p></p>
+            <ul class="actions">
+                <li><input type="submit" value="Send Message" class="primary" /></li>
+                <li><input type="reset" value="Clear" /></li>
+            </ul>
+        </form>
+        <ul class="icons">
+            <li><a href="https://www.linkedin.com/in/justin-vignone/" class="icon brands fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
+            <li><a href="https://github.com/Vignoneja" class="icon brands fa-github" target="_blank"><span class="label">GitHub</span></a></li>
+        </ul>
+    </article>
+}

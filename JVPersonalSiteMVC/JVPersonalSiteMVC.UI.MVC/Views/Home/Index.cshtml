@@ -1,0 +1,142 @@
+﻿@model JVPersonalSiteMVC.UI.MVC.Models.ContactViewModel
+<!-- Header & Nav-->
+<header id="header">
+    <div class="logo">
+        <span class="icon brands fa-empire"></span>
+    </div>
+    <div class="content">
+        <div class="inner">
+            <h1>Justin Vignone</h1>
+            <p>Full stack web developer, ready to join your team.</p>
+        </div>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#intro">Intro</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#classmates">Classmates</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+<!-- Main -->
+<article id="main">
+
+    <!-- #region Intro -->
+
+    <article id="intro">
+        <h2 class="major">Intro</h2>
+        <span class="image main"><img src="~/Content/images/Justin.jpg" alt="Justin Vignone" /></span>
+        <p>Hello, My name is Justin Vignone and I'm a full stack web developer. Welcome and please have a look around to see some of the talents that I hopefully will have the oppurtunity to be able to bring to your company.</p>
+        <p>Here is a quick link to some of my <a href="#projects">projects</a> that I've developed while at Centriq and on my spare time.</p>
+        <p>Please feel free to contact me through the <a href="#contact">contact</a> page at any time if you have any questions or would like to setup a meeting of sorts.</p>
+    </article>
+    <!-- #endregion -->
+    <!-- #region Projects -->
+    <article id="projects">
+        <h2 class="major">Projects</h2>
+        <p>
+            I have trained in and built with: <br />.NET Framework, Full Stack Web Application Design, C# Fundamentals,<br />Database Management, Unit Testing, Software Development Lifecycle,<br /> Agile Scrum Methodology, and React.
+        </p>
+        <span class="image main"><a href="http://www.zzz.vignonetech.com" target="_blank"><img src="~/Content/images/Sleep_Inc.jpg" alt="screenshot of Sleep Inc website" /></a></span>
+        <span>Above is a <a href="http://www.zzz.vignonetech.com" target="_blank"> website </a>for a sleep school which utilized: HTML, CSS and JavaScript.</span>
+        <span class="image main"><a href="https://github.com/Vignoneja/JVDungeonApp" target="_blank"><img src="~/Content/images/dungeonapp.jpg" alt="screenshot of dungeon application source code" /></a></span>
+        <span>Above is a link to the source code of my <a href="https://github.com/Vignoneja/JVDungeonApp" target="_blank">Dungeon Application</a> that I built using C#.<br /><br /></span> 
+
+        <p>If you have any questions or critiques about my projects, please feel free to <a href="#contact">contact me here</a>. <br />I am always looking for feedback on how to improve my skills and become more efficent.</p>
+    </article>
+    <!-- #endregion -->
+    <!-- #region About -->
+
+    <article id="about">
+        <h2 class="major">About</h2>
+
+        <button type="button" class="btn btn-lg">
+            <a href="~/Content/JVResumeIT.pdf" target="_blank" alt="Justin Vignone Full Resume PDF Version">Full Resume PDF</a>
+        </button>
+        <span class="image main"><img src="~/Content/images/Vignone.jpg" alt="Vignone, Italy road sign." /></span>
+        <p>
+            I am a Marine Corps Infantry Veteran (8 years of active duty &amp; honorably discharged). After the USMC, I went to school to become a helicopter pilot, where I earned my Private and Commercial licenses. Below, is a picture of me on my very first solo flight!
+            <span class="image main"><img src="~/Content/images/Solo.jpg" alt="Justin Vignone piloting a helicopter by himself." /></span>
+
+        </p>
+
+        <p>
+            While attending school for that, I was a Bartender/Manager at a resturant in Memphis, TN. (MidTown Crossing Bar &amp; Grille). <br />
+            Unfortunately, the helicopter school closed down before I could continue with my Instrument rating. That is when my wife and I decided to move to Saint Louis, MO to be closer to family and for more job opportunities.<br />
+            I found myself working at the National Archives and Records Administration for the next couple of years before deciding to join up at Centriq to pursue a career in Full Stack Web development!
+        </p>
+        <p>
+            <span class="image main"><img src="~/Content/images/Kayaking.JPG" alt="Two kayaks in a lake with a stormy sunset in view" /></span>
+            When I'm not working on my web development skills, I am busy staying active outdoors with my wife and daughter.<br />
+            We enjoy camping, kayaking and running local 5k's (all the outdoorsy stuff really).<br />
+            I am a member of a local Amvets Post and actively help them with events to raise money for struggling veterans and their families. Along with that, I am the Communications officer for the Amvets Post 6 Motorcycle Riders, where I enjoy going on rides whenever the time and weather allow and working with the riders to organize events and meetings.
+        </p>
+        <p>
+            If you would like to learn more, you can connect with me on <a href="https://www.linkedin.com/in/justin-vignone/" target="_blank">LinkedIn</a>
+        </p>
+    </article>
+    <!-- #endregion -->
+    <!-- #region Classmates -->
+
+    <article id="classmates">
+        <h2 class="major">Classmates</h2>
+        <p>
+            While working towards my goal at Centriq to become a Full Stack Web Developer,<br /> I got the opportunity to learn and grow with some other great people.
+        </p>
+        <p>
+            If you have the time, please click on their pictures and check out their personal sites.
+        </p>
+        <ul>
+            <li class="image-link">Mindi Ford : <br /><a href="http://mindiford.com/" target="_blank"><img src="~/Content/images/MindiFord.jpg" alt="Mindi Ford" /></a></li>
+
+            <li class="image-link">Gidonny Ramos : <br /><a href="http://gidonny.com/" target="_blank"><img src="~/Content/images/Gidonny_Ramos.jpg" alt="Gidonny Ramos" /></a></li>
+
+            <li class="image-link">Michael Tullis : <br /><a href="http://miketullis.com/" target="_blank"><img src="~/Content/images/MikeTullis.jpg" alt="Michael Tullis" /></a></li>
+        </ul>        
+
+    </article>
+    <!-- #endregion -->
+
+    <!-- #region Contact -->
+    <article id="contact">
+        <div id="contactConfirmation"></div>
+        <div id="MessageContent"></div>
+        <div id="contactForm">
+            @Html.Partial("ContactAJax", new JVPersonalSiteMVC.UI.MVC.Models.ContactViewModel())
+        </div>
+    </article>    
+    <!-- #endregion -->
+</article>
+<!-- #region Scripts -->
+
+@section scripts{
+    <script>
+        $("#ContactCreateForm").submit(function (e) {
+            var formData = $(this).serializeArray();
+            e.preventDefault();
+
+            $("#MessageContent").html("<div class='alert alert-info'>Please wait while your message is sending...</div>");
+            $.ajax({
+                url: "@Url.Action("ContactAjax", "Home")",              
+                @*url: "ContactAjax/",*@
+                type: "POST",
+                data: formData,
+                dataType: "json",
+                success: function (data) {
+                    $("#MessageContent").hide();
+                    $("#contactConfirmation").load('@Url.Action("ContactConfirmation","Home")', { name: data.Name, email: data.Email }).show();
+                    $("#ContactCreateForm")[0].reset();
+                    setTimeout(function () {
+                        $("#contactConfirmation").fadeToggle("slow");
+                    }, 3000);
+                },                
+                error: function (e) {
+                    $("#MessageContent").html("<div class ='alert alert-warning'>Oh no! There was an error. Please try again later or contact me at my LinkedIn</div>");
+                }//END ERROR
+            });//END AJAX
+        });//END CONTACTCREATEFORM
+    </script>
+}
+<!-- #endregion -->
