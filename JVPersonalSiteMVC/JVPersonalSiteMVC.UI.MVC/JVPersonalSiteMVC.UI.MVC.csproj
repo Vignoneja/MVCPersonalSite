@@ -132,6 +132,7 @@
     <Content Include="Content\css\fontawesome-all.min.css" />
     <Content Include="Content\css\main.css" />
     <Content Include="Content\css\noscript.css" />
+    <Content Include="Content\images\api.jpg" />
     <Content Include="Content\images\Benjamin_Adler.jpg" />
     <Content Include="Content\images\bg.jpg" />
     <Content Include="Content\images\bg2.jpg" />
@@ -149,6 +150,8 @@
     <Content Include="Content\images\pic03.jpg" />
     <Content Include="Content\images\Sleep_Inc.jpg" />
     <Content Include="Content\images\Solo.jpg" />
+    <Content Include="Content\images\Storefront.jpg" />
+    <Content Include="Content\images\todo.jpg" />
     <Content Include="Content\images\Vignone.jpg" />
     <Content Include="Content\webfonts\fa-brands-400.svg" />
     <Content Include="Content\webfonts\fa-regular-400.svg" />
