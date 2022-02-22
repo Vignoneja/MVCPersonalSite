@@ -10,9 +10,11 @@ namespace JVPersonalSiteMVC.UI.MVC.Models
     {
         [Required(ErrorMessage = "** Name is required")]
         public string Name { get; set; }
+
         [DataType(DataType.EmailAddress)]
         [Required(ErrorMessage = "** Email is required")]
         public string Email { get; set; }
+
         [Required(ErrorMessage = "** Message is required")]
         [UIHint("MultilineText")]
         public string Message { get; set; }

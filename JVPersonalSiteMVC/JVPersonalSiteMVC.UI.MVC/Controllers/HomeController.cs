@@ -2,9 +2,6 @@
 using System.Net;
 using System.Net.Mail;
 using System.Web.Mvc;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Configuration;
 
 namespace JVPersonalSiteMVC.UI.MVC.Controllers
@@ -19,6 +16,10 @@ namespace JVPersonalSiteMVC.UI.MVC.Controllers
         [HttpPost]
         public JsonResult ContactAjax(ContactViewModel cvm)
         {
+            if (!ModelState.IsValid)
+            {
+                return Json(cvm);
+            }
             string body = $"You have received an email from <strong>{cvm.Name}</strong>. The e-mail address given was <strong>{cvm.Email}</strong>.<br/>" +
                 $"<strong>The following message was sent:</strong> {cvm.Message}";
             string EmailUser = ConfigurationManager.AppSettings["EmailUser"].ToString();
@@ -31,9 +32,7 @@ namespace JVPersonalSiteMVC.UI.MVC.Controllers
             mm.IsBodyHtml = true;
             mm.ReplyToList.Add(cvm.Email);
 
-            SmtpClient smtp = new SmtpClient(EmailClient);
-            //NetworkCredential cred = new NetworkCredential(EmailUser, EmailPassword);
-            smtp.Port = 8889;
+            SmtpClient smtp = new SmtpClient(EmailClient);            
 
             smtp.Credentials = new NetworkCredential(EmailUser, EmailPassword);
             smtp.Send(mm);

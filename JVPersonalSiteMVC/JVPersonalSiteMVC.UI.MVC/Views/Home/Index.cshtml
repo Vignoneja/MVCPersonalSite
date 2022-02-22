@@ -35,32 +35,39 @@
     <!-- #endregion -->
     <!-- #region Projects -->
     <article id="projects">
-        <h2 class="major">Projects</h2>
+        <h1 class="major">Projects</h1>
         <p>
-            I have trained in and built applications with : <br /><br/>.NET Framework, Full Stack Web Application Design, C# Fundamentals, Database Management, Unit Testing, Software Development Lifecycle, Agile Scrum Methodology, and React.
+            I have trained in and built applications with : <br /><br />.NET Framework, Full Stack Web Application Design, C# Fundamentals, Database Management, Unit Testing, Software Development Lifecycle, Agile Scrum Methodology, and React.
         </p>
-        <h3>MVC Video Game Store : </h3>
-        <span>Below is a link to an <a href="http://www.StoreFront.vignonetech.com" target="_blank">eCommerce application</a> that I built using : SQL, .NET Framework, XML, JSON, MVC and Much more. </span>
+        <h2>Team Project : </h2>
+        <span>
+            Below is a link to an <a href="http://www.SAT.vignonetech.com" target="_blank">project</a> that my classmates and I built using : Foundational knowledge of source control using GitHub. Teamwork in an Agile and Scrum environment. Better understanding of real-world environments for developers.<br /><br />I really enjoyed being able to work with my classmates through problems and ideas to really nail down the final look of the site.
+        </span>
+        <span class="image main"><a href="http://www.SAT.vignonetech.com" target="_blank"><img src="~/Content/images/SAT.jpg" alt="screenshot of a Fake University website" /></a></span>
+
+        <h2>MVC Video Game Store : </h2>
+        <span>Below is a link to an <a href="http://www.StoreFront.vignonetech.com" target="_blank">eCommerce application</a> that I built using : SQL, .NET Framework, XML, JSON, MVC and Much more.<br /><br />I hope to add more functionality in the future but for now it will house a list of all the video games I own.</span>
         <span class="image main"><a href="http://www.StoreFront.vignonetech.com" target="_blank"><img src="~/Content/images/Storefront.jpg" alt="screenshot of a Video Game website" /></a></span>
-        
-        <h3>React "To Do" Application : </h3>
-        <span>Here is a link to an simple "To Do" <a href="http://www.todo.vignonetech.com" target="_blank"> React application </a>that I built using : React</span>
+
+        <h2>React "To Do" Application : </h2>
+        <span>Here is a link to an simple "To Do" <a href="http://www.todo.vignonetech.com" target="_blank"> React application </a>that I built using : React<br /><br />I really love working in React as it was fun building props and components and fitting it all together like a neat puzzle just fascinated me.</span>
         <span class="image main"><a href="http://www.todo.vignonetech.com" target="_blank"><img src="~/Content/images/todo.jpg" alt="a simple React application" /></a></span>
-        
-        <h3>"To Do" API : </h3>
-        <span>Here is the link to the source code of my <a href="https://github.com/Vignoneja/ToDoApi" target="_blank">.NET WEB API</a> which is used to populate the data in my React Application above</span>
+
+        <h2>"To Do" API : </h2>
+        <span>Here is the link to the source code of my <a href="https://github.com/Vignoneja/ToDoApi" target="_blank">.NET WEB API</a> which is used to populate the data in my React Application above!</span>
         <span class="image main"><a href="https://github.com/Vignoneja/ToDoApi" target="_blank"><img src="~/Content/images/api.jpg" alt="screenshot of my Api Code" /></a></span>
-        
-        <h3>C# Dungeon Application : </h3>
-        <span>Here is a link to the source code of my <a href="https://github.com/Vignoneja/JVDungeonApp" target="_blank">Dungeon Application</a> that I built using purely C#. See if you can find the easter egg </span>
+
+        <h2>C# Dungeon Application : </h2>
+        <span>Here is a link to the source code of my <a href="https://github.com/Vignoneja/JVDungeonApp" target="_blank">Dungeon Application</a> that I built using purely C#.<br /><br />In the future I would like to add more of an inventory system to extend the playtime of the game. See if you can find the easter egg in the program!</span>
         <span class="image main"><a href="https://github.com/Vignoneja/JVDungeonApp" target="_blank"><img src="~/Content/images/dungeonapp.jpg" alt="screenshot of dungeon application source code" /></a></span>
-        
-        <h3>Static HTML Page : </h3>
+
+        <h2>Static HTML Page : </h2>
         <span>Below is the first <a href="http://www.zzz.vignonetech.com" target="_blank">website</a> I ever built! It is for a made-up sleep school which utilized: HTML, CSS and JavaScript.</span>
         <span class="image main"><a href="http://www.zzz.vignonetech.com" target="_blank"><img src="~/Content/images/Sleep_Inc.jpg" alt="screenshot of Sleep Inc website" /></a></span>
-        
+
         <br /><br />
-        <p>If you have any questions or critiques about my projects, please feel free to <a href="#contact">contact me here</a>. <br />I am always looking for feedback on how to improve my skills and become more efficent.</p>
+        <h3>Feedback : </h3>
+        <p>If you have any questions or critiques about my projects, please feel free to <a href="#contact">contact me here</a>. <br />I am always looking for feedback on how to improve my skills and become more efficient.</p>
     </article>
     <!-- #endregion -->
     <!-- #region About -->
@@ -110,11 +117,10 @@
             <li class="image-link">Gidonny Ramos : <br /><a href="http://gidonny.com/" target="_blank"><img src="~/Content/images/Gidonny_Ramos.jpg" alt="Gidonny Ramos" /></a></li>
 
             <li class="image-link">Michael Tullis : <br /><a href="http://miketullis.com/" target="_blank"><img src="~/Content/images/MikeTullis.jpg" alt="Michael Tullis" /></a></li>
-        </ul>        
+        </ul>
 
     </article>
     <!-- #endregion -->
-
     <!-- #region Contact -->
     <article id="contact">
         <div id="contactConfirmation"></div>
@@ -122,7 +128,7 @@
         <div id="contactForm">
             @Html.Partial("ContactAJax", new JVPersonalSiteMVC.UI.MVC.Models.ContactViewModel())
         </div>
-    </article>    
+    </article>
     <!-- #endregion -->
 </article>
 <!-- #region Scripts -->
@@ -135,19 +141,23 @@
 
             $("#MessageContent").html("<div class='alert alert-info'>Please wait while your message is sending...</div>");
             $.ajax({
-                url: "@Url.Action("ContactAjax", "Home")",              
-                @*url: "ContactAjax/",*@
+                url: "@Url.Action("ContactAjax", "Home")",
                 type: "POST",
                 data: formData,
                 dataType: "json",
                 success: function (data) {
-                    $("#MessageContent").hide();
+                    if (data.Name == null || data.Message == null || data.Email == null) {
+                        $("#MessageContent").html("<div class ='alert alert-warning'>***Please ensure all of the required fields have been filled in. Thank you!</div>");
+                    }
+                    else {
+                        $("#MessageContent").hide();
                     $("#contactConfirmation").load('@Url.Action("ContactConfirmation","Home")', { name: data.Name, email: data.Email }).show();
                     $("#ContactCreateForm")[0].reset();
                     setTimeout(function () {
                         $("#contactConfirmation").fadeToggle("slow");
-                    }, 3000);
-                },                
+                    }, 8000);
+                    }
+                },
                 error: function (e) {
                     $("#MessageContent").html("<div class ='alert alert-warning'>Oh no! There was an error. Please try again later or contact me at my LinkedIn</div>");
                 }//END ERROR

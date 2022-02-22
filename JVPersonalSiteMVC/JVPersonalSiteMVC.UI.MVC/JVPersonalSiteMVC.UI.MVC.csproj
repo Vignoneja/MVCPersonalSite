@@ -133,7 +133,6 @@
     <Content Include="Content\css\main.css" />
     <Content Include="Content\css\noscript.css" />
     <Content Include="Content\images\api.jpg" />
-    <Content Include="Content\images\Benjamin_Adler.jpg" />
     <Content Include="Content\images\bg.jpg" />
     <Content Include="Content\images\bg2.jpg" />
     <Content Include="Content\images\dungeonapp.jpg" />
@@ -148,6 +147,7 @@
     <Content Include="Content\images\pic01.jpg" />
     <Content Include="Content\images\pic02.jpg" />
     <Content Include="Content\images\pic03.jpg" />
+    <Content Include="Content\images\SAT.jpg" />
     <Content Include="Content\images\Sleep_Inc.jpg" />
     <Content Include="Content\images\Solo.jpg" />
     <Content Include="Content\images\Storefront.jpg" />
@@ -159,6 +159,11 @@
     <Content Include="Scripts\breakpoints.min.js" />
     <Content Include="Scripts\browser.min.js" />
     <Content Include="Scripts\jquery.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\main.js" />
     <Content Include="Scripts\util.js" />
     <Content Include="_Archive\MVC_Template\bootstrap-theme.css" />
@@ -268,7 +273,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="_Archive\Site_Template\assets\JVResumeIT.pdf" />
